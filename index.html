@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SC Survey & Construction รับงานสำรวจวิศวกรรมทั่วประเทศ สำรวจภูมิประเทศ วางผังและตรวจสอบเสาเข็ม สำรวจด้วยโดรน ตรวจวัดการทรุดตัว As-Built ติดต่อตรง ประเมินราคาฟรี">
+<title id="pageTitle">SC Survey & Construction Co., Ltd. | รับงานสำรวจวิศวกรรมทั่วประเทศ</title>
+<link rel="icon" href="logo.jpg">
+
+<style>
+:root {
+  --green: #153f38;
+  --gold: #dcae4e;
+  --light: #f5f5f2;
+  --white: #ffffff;
+  --dark: #172b38;
+  --gray: #64747d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Leelawadee UI", Tahoma, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1160px, calc(100% - 44px));
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--green);
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+
+.logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  background: #fff;
+  padding: 3px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+.brand strong { display: block; color: white; font-size: 15px; }
+.brand small { color: #d5e1dc; font-size: 10px; letter-spacing: 2px; }
+
+nav { display: flex; gap: 18px; align-items: center; }
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  padding: 5px 0;
+}
+
+nav button:hover, nav button.active { color: var(--gold); }
+
+/* ปุ่มเปลี่ยนภาษา */
+.lang-switcher {
+  display: flex;
+  background: rgba(0,0,0,0.25);
+  border-radius: 20px;
+  padding: 3px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #d5e1dc;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 9px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: .2s;
+  font-family: inherit;
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px 20px;
+  border-radius: 9px;
+  background: var(--gold);
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 15px;
+  transition: .2s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px 20px;
+  border-radius: 9px;
+  background: #06C755;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.btn-line:hover { transform: translateY(-3px); background: #05b34c; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 9px;
+  color: #fff;
+  background: transparent;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* PAGE SYSTEM */
+.page-section { display: none; }
+.page-section.active { display: block; }
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* HERO */
+.hero {
+  color: white;
+  overflow: hidden;
+  position: relative;
+  background:
+    linear-gradient(90deg, rgba(21,63,56,0.95) 0%, rgba(21,63,56,0.7) 60%),
+    url("hero.jpg") center / cover no-repeat;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: minmax(0, 680px);
+  align-items: center;
+  padding: 65px 0;
+}
+
+.trust-badge {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px;
+  padding: 7px 16px;
+  font-size: 13px;
+  color: #d5e1dc;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: clamp(34px, 4.8vw, 58px);
+  line-height: 1.25;
+  margin: 15px 0;
+}
+
+h1 span { color: var(--gold); }
+
+.hero p {
+  color: #d8e4eb;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+
+.chip {
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px;
+  padding: 7px 14px;
+  font-size: 13px;
+  color: #fff;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.chip:hover { border-color: var(--gold); color: var(--gold); }
+
+/* STATS */
+.stats { background: white; border-bottom: 1px solid #ddd; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 25px 0;
+}
+
+.stat { text-align: center; border-right: 1px solid #ddd; padding: 8px; }
+.stat:last-child { border: none; }
+.stat b { display: block; color: var(--green); }
+.stat span { color: var(--gray); font-size: 12px; }
+
+/* CONFIDENCE */
+.confidence-section {
+  background: #172b38;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.confidence-section h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 50px;
+}
+
+.confidence-grid {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  text-align: left;
+}
+
+.confidence-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 25px 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: .3s;
+}
+
+.confidence-card:hover {
+  background: rgba(255,255,255,.08);
+  border-color: var(--gold);
+}
+
+.confidence-num {
+  background: var(--gold);
+  color: var(--dark);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.confidence-content h3 { font-size: 18px; margin-bottom: 8px; }
+.confidence-content p { font-size: 14px; color: #b0c4de; line-height: 1.7; }
+
+.confidence-content a {
+  color: var(--gold);
+  text-decoration: underline;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+/* PORTFOLIO */
+.sub-nav-bar {
+  background: var(--dark);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.sub-nav-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 22px;
+}
+
+.filter-btn {
+  background: rgba(255,255,255,.1);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: .2s;
+  font-family: inherit;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--gold);
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.gallery-section {
+  padding: 50px 0;
+  background: var(--dark);
+  min-height: 80vh;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  background: #223848;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  flex-direction: column;
+  transition: .3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.3);
+}
+
+.gallery-img-box {
+  height: 220px;
+  background: #10202b;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  color: #6f8796;
+  font-size: 13px;
+}
+
+.gallery-img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+.gallery-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: var(--gold);
+  color: var(--dark);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.gallery-content { padding: 18px; color: white; }
+.gallery-content h3 { font-size: 16px; margin-bottom: 8px; color: var(--gold); }
+.gallery-content p { font-size: 12px; color: #b0c4de; line-height: 1.6; }
+
+/* GENERAL */
+section { padding: 82px 0; }
+
+.section-head { max-width: 760px; margin-bottom: 38px; }
+.section-head h2 { font-size: 34px; color: var(--green); margin: 12px 0; }
+.section-head p { color: var(--gray); line-height: 1.9; }
+
+/* SERVICES */
+.services { background: #eaf0ed; }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 20px;
+  border: 1px solid #e0e5e2;
+  box-shadow: 0 10px 30px rgba(20,50,65,.04);
+  transition: .3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(20,50,65,.1);
+  border-color: var(--gold);
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: #f5e8c9;
+  color: #a87519;
+  border-radius: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.service-card h3 { color: var(--green); font-size: 18px; margin-bottom: 14px; line-height: 1.4; }
+.service-card p { color: var(--gray); font-size: 13px; line-height: 1.8; flex: 1; }
+
+.service-more {
+  display: inline-block;
+  margin-top: 14px;
+  color: #a87519;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.deliverables-card {
+  grid-column: 1 / -1;
+  background: #fff;
+  border: 2px dashed var(--gold);
+  padding: 35px;
+  border-radius: 20px;
+}
+
+.deliverables-card h3 { color: var(--green); font-size: 20px; margin-bottom: 12px; }
+.deliverables-card p { font-size: 14px; line-height: 1.8; }
+
+/* SERVICE DETAIL */
+.sd-hero { background: var(--green); color: #fff; padding: 55px 0; }
+.sd-hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 12px 0; line-height: 1.3; }
+.sd-hero p { color: #d8e4eb; line-height: 1.9; max-width: 760px; }
+
+.sd-back {
+  background: none;
+  border: none;
+  color: #d5e1dc;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.sd-back:hover { color: var(--gold); }
+
+.sd-grid {
+  display: grid;
+  grid-template-columns: 1.5fr .8fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.sd-block {
+  background: #fff;
+  border: 1px solid #e0e5e2;
+  border-radius: 16px;
+  padding: 26px 28px;
+  margin-bottom: 20px;
+}
+
+.sd-block h3 { color: var(--green); margin-bottom: 12px; }
+.sd-block ul { padding-left: 20px; line-height: 2; font-size: 14px; }
+
+.sd-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.sd-photos img { width: 100%; height: 190px; object-fit: cover; border-radius: 10px; }
+
+.sd-side {
+  position: sticky;
+  top: 100px;
+  background: var(--dark);
+  color: #fff;
+  border-radius: 16px;
+  padding: 26px;
+  display: grid;
+  gap: 10px;
+}
+
+.sd-side p { color: #b0c4de; font-size: 13px; line-height: 1.8; margin-bottom: 6px; }
+.sd-side .btn, .sd-side .btn-line, .sd-side .btn-ghost { width: 100%; }
+
+/* QUOTE FORM */
+.quote-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(20,50,65,.06);
+}
+
+.quote-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--green);
+  margin-bottom: 5px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.quote-alt {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.quote-alt a { color: #06a548; font-weight: bold; }
+
+/* PROCESS */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+}
+
+.process {
+  background: white;
+  border-top: 3px solid var(--gold);
+  padding: 22px 18px;
+  border-radius: 0 0 12px 12px;
+}
+
+.process span { color: #b17d20; font-size: 12px; font-weight: bold; }
+.process b { display: block; color: var(--green); margin: 12px 0 8px; }
+.process p { color: var(--gray); font-size: 12px; line-height: 1.8; }
+
+/* CONTACT */
+.contact {
+  background: var(--green);
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.contact h2 { font-size: 36px; margin: 12px 0; }
+.contact p { color: #d5e0e6; line-height: 1.9; }
+
+.contact-list { display: grid; gap: 8px; margin-top: 25px; }
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 14px;
+}
+
+.contact-item span {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.12);
+  border-radius: 10px;
+}
+
+a.contact-item {
+  padding: 8px 10px;
+  margin: 0 -10px;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+a.contact-item:hover { background: rgba(255,255,255,.08); color: var(--gold); }
+
+.contact-item span.icon-line   { background: #06C755; font-weight: bold; color: #fff; }
+.contact-item span.icon-fb     { background: #1877F2; font-weight: bold; color: #fff; }
+.contact-item span.icon-tiktok { background: #000; color: #fff; }
+
+.contact-panel {
+  background: white;
+  color: var(--dark);
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.contact-panel h3 { color: var(--green); margin-bottom: 12px; }
+.contact-panel p { color: var(--gray); font-size: 13px; margin-bottom: 15px; }
+
+.contact-panel label {
+  font-size: 12px;
+  color: var(--gray);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-panel input,
+.contact-panel textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+/* FLOATING LINE */
+.line-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #06C755;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.3);
+  transition: .2s;
+}
+
+.line-float:hover { transform: scale(1.08); }
+
+/* FOOTER */
+footer {
+  background: #102c40;
+  color: #c6d4dc;
+  padding: 25px 0;
+  font-size: 12px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: var(--green);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav.open { display: flex; }
+  .menu-btn { display: block; }
+  .nav-cta { display: none; }
+
+  .sd-grid,
+  .form-row,
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .sd-side { position: static; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 520px) {
+  .container { width: calc(100% - 32px); }
+
+  .stats-grid,
+  .service-grid,
+  .process-grid,
+  .gallery-grid,
+  .sd-photos { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <div class="brand" onclick="switchPage('home')">
+      <img class="logo" src="logo.jpg" alt="โลโก้ SC Survey">
+      <div>
+        <strong>SC SURVEY & CONSTRUCTION</strong>
+        <small>CO., LTD.</small>
+      </div>
+    </div>
+
+    <nav id="mainNav">
+      <button onclick="switchPage('home')" class="active" data-i18n="navHome">หน้าแรก</button>
+      <button onclick="switchPage('services')" data-i18n="navServices">บริการของเรา</button>
+      <button onclick="switchPage('portfolio')" data-i18n="navPortfolio">ผลงาน</button>
+      <button onclick="switchPage('process')" data-i18n="navProcess">ขั้นตอนการทำงาน</button>
+      <button onclick="switchPage('quote')" data-i18n="navQuote">ขอใบเสนอราคา</button>
+      <button onclick="switchPage('contact')" data-i18n="navContact">ติดต่อเรา</button>
+
+      <!-- ปุ่มเปลี่ยนภาษา -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('th')">TH</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('zh')">中文</button>
+      </div>
+    </nav>
+
+    <button class="btn nav-cta" onclick="switchPage('quote')" data-i18n="btnQuoteTop">ขอใบเสนอราคา ↗</button>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="เมนู">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. หน้าแรก -->
+  <div id="page-home" class="page-section active">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="trust-badge" data-i18n="heroBadge">✓ ทีมสำรวจภาคสนามตัวจริง · คุยตรง ไม่ผ่านคนกลาง</span>
+          <h1 data-i18n-html="heroTitle">
+            สำรวจอย่างแม่นยำ<br>
+            <span>ก่อสร้างอย่างมั่นใจ</span><br>
+            รับงานทั่วประเทศ
+          </h1>
+          <p data-i18n="heroDesc">
+            SC Survey & Construction ให้บริการงานสำรวจวิศวกรรมครบวงจร ตั้งแต่สำรวจภูมิประเทศ
+            วางผังและตรวจสอบเสาเข็ม สำรวจด้วยโดรน ตรวจวัดการทรุดตัว ไปจนถึงงาน As-Built
+            ติดต่อทีมงานได้โดยตรง ประเมินราคาไว ส่งมอบข้อมูลตามมาตรฐานโครงการ
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="tel:PHONE"><span data-i18n="btnCall">☎ โทร</span> PHONE</a>
+            <a class="btn-line" href="https://line.me/ti/p/kRrU94LL9a" target="_blank" rel="noopener"><span data-i18n="btnLine">💬 แอดไลน์</span></a>
+            <button class="btn-ghost" onclick="switchPage('quote')" data-i18n="btnRequestQuote">📝 ขอใบเสนอราคา</button>
+          </div>
+          <div class="chips">
+            <button class="chip" onclick="openService('topo')" data-i18n="chipTopo">สำรวจภูมิประเทศ</button>
+            <button class="chip" onclick="openService('pile')" data-i18n="chipPile">วาง/ตรวจเสาเข็ม</button>
+            <button class="chip" onclick="openService('drone')" data-i18n="chipDrone">โดรน UAV</button>
+            <button class="chip" onclick="openService('settlement')" data-i18n="chipSettle">ตรวจวัดการทรุดตัว</button>
+            <button class="chip" onclick="openService('volume')" data-i18n="chipVol">ปริมาตรดิน</button>
+            <button class="chip" onclick="openService('hydro')" data-i18n="chipHydro">สำรวจใต้น้ำ</button>
+            <button class="chip" onclick="switchPage('services')" data-i18n="chipAll">บริการทั้งหมด →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <b data-i18n="stat1Title">คุยตรงกับทีมงาน</b>
+          <span data-i18n="stat1Desc">ไม่ผ่านคนกลาง ตอบไว</span>
+        </div>
+        <div class="stat">
+          <b data-i18n="stat2Title">ประเมินราคาฟรี</b>
+          <span data-i18n="stat2Desc">ส่งแบบหรือพิกัดหน้างานทาง LINE</span>
+        </div>
+        <div class="stat">
+          <b data-i18n="stat3Title">รับงานทั่วประเทศ</b>
+          <span data-i18n="stat3Desc">ทีมภาคสนามพร้อมเครื่องมือ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- มั่นใจได้ทุกขั้นตอน -->
+    <section class="confidence-section">
+      <div class="container">
+        <h2 data-i18n="confHeading">มั่นใจได้ทุกขั้นตอน</h2>
+        <div class="confidence-grid">
+
+          <div class="confidence-card">
+            <div class="confidence-num">1</div>
+            <div class="confidence-content">
+              <h3 data-i18n="conf1Title">ตรวจสอบข้อมูลก่อนส่งมอบทุกครั้ง</h3>
+              <p data-i18n="conf1Desc">ข้อมูลทุกชุดผ่านการตรวจสอบซ้ำทั้งหน้างานและในสำนักงาน ส่งมอบในรูปแบบที่ทีมออกแบบและผู้รับเหมานำไปใช้งานต่อได้ทันที</p>
+            </div>
+          </div>
+
+          <div class="confidence-card">
+            <div class="confidence-num">2</div>
+            <div class="confidence-content">
+              <h3 data-i18n="conf2Title">ทีมงานประสบการณ์สูง</h3>
+              <p><span data-i18n="conf2Desc">ผ่านงานภาคสนามมาแล้วหลากหลายรูปแบบ ทั้งงานอาคาร โรงงาน คลังสินค้า และโครงสร้างพื้นฐาน</span> <a href="#" onclick="switchPage('portfolio'); return false;" data-i18n="confLink">ดูผลงานของเรา →</a></p>
+            </div>
+          </div>
+
+          <div class="confidence-card">
+            <div class="confidence-num">3</div>
+            <div class="confidence-content">
+              <h3 data-i18n="conf3Title">รับงานทั่วประเทศ</h3>
+              <p data-i18n="conf3Desc">มีความพร้อมด้านทีมงานภาคสนามและเครื่องมือสำรวจทันสมัย พร้อมเดินทางปฏิบัติงานทุกจังหวัดทั่วประเทศไทย</p>
+            </div>
+          </div>
+
+          <div class="confidence-card">
+            <div class="confidence-num">4</div>
+            <div class="confidence-content">
+              <h3 data-i18n="conf4Title">ทำงานตามมาตรฐานและข้อกำหนดของโครงการ</h3>
+              <p data-i18n="conf4Desc">เครื่องมือผ่านการสอบเทียบ (Calibration) ปฏิบัติงานตามข้อกำหนดของแต่ละโครงการ พร้อมเอกสารประกอบครบถ้วน</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 2. บริการของเรา -->
+  <div id="page-services" class="page-section">
+    <section class="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" data-i18n="servEyebrow">SURVEY SERVICES</div>
+          <h2 data-i18n="servHeading">บริการงานสำรวจวิศวกรรมครบวงจร</h2>
+          <p data-i18n="servDesc">ให้บริการงานสำรวจวิศวกรรมสำหรับโครงการก่อสร้าง โรงงาน คลังสินค้า อาคาร และงานพัฒนาอสังหาริมทรัพย์ ตั้งแต่งานสำรวจเบื้องต้น งานควบคุมการก่อสร้าง งานตรวจสอบ ไปจนถึงงานสำรวจเพื่อส่งมอบโครงการ กดที่บริการเพื่อดูรายละเอียด</p>
+        </div>
+
+        <div class="service-grid" id="serviceGrid">
+          <article class="deliverables-card">
+            <h3 data-i18n="delivTitle">รูปแบบงานส่งมอบ / DELIVERABLES</h3>
+            <p data-i18n="delivDesc">DWG, PDF, CSV, Excel, Civil 3D, ตารางพิกัด, รายงานผลสำรวจ, Photo Report, Method Statement และ Calibration Certificate ตามข้อกำหนดของแต่ละโครงการ</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 3. หน้ารายละเอียดบริการ -->
+  <div id="page-service" class="page-section">
+    <section class="sd-hero">
+      <div class="container">
+        <button class="sd-back" onclick="switchPage('services')" data-i18n="sdBack">← กลับไปหน้าบริการทั้งหมด</button>
+        <div class="eyebrow" id="sdTag"></div>
+        <h1 id="sdTitle"></h1>
+        <p id="sdIntro"></p>
+      </div>
+    </section>
+
+    <section style="padding: 50px 0;">
+      <div class="container sd-grid">
+        <div>
+          <div class="sd-block"><h3 data-i18n="sdScopeTitle">ขอบเขตงานที่เราทำ</h3><ul id="sdScope"></ul></div>
+          <div class="sd-block"><h3 data-i18n="sdToolsTitle">เครื่องมือที่ใช้</h3><ul id="sdTools"></ul></div>
+          <div class="sd-block"><h3 data-i18n="sdDeliverTitle">สิ่งที่ลูกค้าจะได้รับ</h3><ul id="sdDeliver"></ul></div>
+          <div class="sd-block"><h3 data-i18n="sdPhotosTitle">ภาพงานจริงจากทีมเรา</h3><div class="sd-photos" id="sdPhotos"></div></div>
+        </div>
+
+        <aside class="sd-side">
+          <h3 data-i18n="sdSideHeading">สนใจบริการนี้?</h3>
+          <p data-i18n="sdSideDesc">ส่งตำแหน่งหน้างาน ขนาดพื้นที่ หรือแบบก่อสร้างมาให้ดูได้เลย ทีมงานประเมินราคาให้ฟรี</p>
+          <a class="btn" href="tel:PHONE">☎ <span data-i18n="btnCall">โทร</span> PHONE</a>
+          <a class="btn-line" href="https://line.me/ti/p/kRrU94LL9a" target="_blank" rel="noopener"><span data-i18n="sdLineBtn">💬 ส่งแบบทาง LINE</span></a>
+          <button class="btn-ghost" onclick="switchPage('quote')" data-i18n="btnRequestQuote">📝 ขอใบเสนอราคา</button>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <!-- 4. หน้าผลงาน -->
+  <div id="page-portfolio" class="page-section">
+    <div class="sub-nav-bar">
+      <div class="sub-nav-container">
+        <button class="filter-btn active" onclick="filterGallery('all', event)" data-i18n="filterAll">ทั้งหมด</button>
+        <button class="filter-btn" onclick="filterGallery('land', event)" data-i18n="filterLand">ภาคพื้นดิน</button>
+        <button class="filter-btn" onclick="filterGallery('drone', event)">Drone & LiDAR</button>
+        <button class="filter-btn" onclick="filterGallery('water', event)" data-i18n="filterWater">ท้องน้ำ</button>
+        <button class="filter-btn" onclick="filterGallery('volume', event)" data-i18n="filterVol">ปริมาณดิน</button>
+        <button class="filter-btn" onclick="filterGallery('pile', event)" data-i18n="filterPile">เสาเข็ม</button>
+        <button class="filter-btn" onclick="filterGallery('onsite', event)">ภาพหน้างานจริง</button>
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <div class="container gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-category="land">
+          <div class="gallery-img-box">
+            <img src="work1.jpg" alt="ทีมสำรวจ GPS RTK">
+            <div class="gallery-badge">GPS RTK</div>
+          </div>
+          <div class="gallery-content">
+            <h3 data-i18n="work1Title">ทีมสำรวจ GPS RTK เก็บพิกัดหน้างานจริง</h3>
+            <p data-i18n="work1Desc">การกำหนดหมุดควบคุมและตรวจสอบค่าพิกัดความละเอียดสูงหน้างานก่อสร้าง</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="drone">
+          <div class="gallery-img-box">
+            <img src="work2.jpg" alt="สำรวจทางอากาศด้วยโดรนสำรวจ">
+            <div class="gallery-badge">UAV Drone</div>
+          </div>
+          <div class="gallery-content">
+            <h3 data-i18n="work2Title">สำรวจทางอากาศด้วยโดรนสำรวจ</h3>
+            <p data-i18n="work2Desc">จัดทำแผนที่ Orthophoto และแบบจำลองภูมิประเทศ 3 มิติ</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="water">
+          <div class="gallery-img-box">
+            <img src="work3.jpg" alt="สำรวจภูมิประเทศใต้น้ำ">
+            <div class="gallery-badge">Hydrographic</div>
+          </div>
+          <div class="gallery-content">
+            <h3 data-i18n="work3Title">สำรวจภูมิประเทศใต้น้ำ</h3>
+            <p data-i18n="work3Desc">ตรวจวัดระดับท้องน้ำและความลึกคลองหรืออ่างเก็บน้ำ</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="volume">
+          <div class="gallery-img-box">
+            <img src="work4.jpg" alt="คำนวณปริมาตรดินตัดและดินถม">
+            <div class="gallery-badge">Cut & Fill</div>
+          </div>
+          <div class="gallery-content">
+            <h3 data-i18n="work4Title">คำนวณปริมาตรดินตัดและดินถม</h3>
+            <p data-i18n="work4Desc">สำรวจพื้นที่และประเมินปริมาณงานดินสำหรับโครงการก่อสร้างขนาดใหญ่</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="pile">
+          <div class="gallery-img-box">
+            <img src="work5.jpg" alt="ตรวจสอบตำแหน่งเสาเข็ม">
+            <div class="gallery-badge">Pile Check</div>
+          </div>
+          <div class="gallery-content">
+            <h3 data-i18n="work5Title">ตรวจสอบตำแหน่งเสาเข็มอาคาร</h3>
+            <p data-i18n="work5Desc">ตรวจสอบค่าพิกัดและการเยื้องศูนย์ของเสาเข็มหลังการติดตั้ง</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="land">
+          <div class="gallery-img-box">
+            <img src="work6.jpg" alt="งานวางผังด้วยกล้อง Total Station">
+            <div class="gallery-badge">Total Station</div>
+          </div>
+          <div class="gallery-content">
+            <h3 data-i18n="work6Title">งานวางผังและตั้งกล้องสำรวจ</h3>
+            <p data-i18n="work6Desc">วางแนวแกนอาคาร (Grid Line) และระดับโครงสร้างพื้นฐาน</p>
+          </div>
+        </div>
+
+        <!-- ภาพหน้างานจริงชุดใหม่ เพิ่มต่อท้าย -->
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work7.jpg" alt="ส่องกล้องสำรวจระดับหน้างาน" loading="lazy">
+            <div class="gallery-badge">Leveling</div>
+          </div>
+          <div class="gallery-content">
+            <h3>การส่องกล้องสำรวจและควบคุมระดับโครงสร้าง</h3>
+            <p>ปฏิบัติงานตรวจสอบระดับและความเรียบของโครงสร้างอย่างละเอียด เพื่อให้งานก่อสร้างได้มาตรฐาน</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work8.jpg" alt="ตั้งกล้อง Total Station อ.หนองแค จ.สระบุรี" loading="lazy">
+            <div class="gallery-badge">Total Station</div>
+          </div>
+          <div class="gallery-content">
+            <h3>การตั้งกล้อง Total Station (อ.หนองแค จ.สระบุรี)</h3>
+            <p>ปฏิบัติงานตั้งกล้องสำรวจความละเอียดสูงเพื่อควบคุมแนวโครงสร้างและฐานรากหน้างานก่อสร้าง</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work9.jpg" alt="ตรวจสอบแนวโครงสร้างคอนกรีต" loading="lazy">
+            <div class="gallery-badge">Structure Check</div>
+          </div>
+          <div class="gallery-content">
+            <h3>การตรวจสอบแนวและดิ่งโครงสร้างคอนกรีต</h3>
+            <p>ตรวจสอบความตั้งตรงและแนวระนาบของเสาและผนังอาคารด้วยเครื่องมือวัดมาตรฐาน</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work10.jpg" alt="ทีมงานสำรวจบนโครงสร้างเหล็กสูง" loading="lazy">
+            <div class="gallery-badge">High-Rise Safety</div>
+          </div>
+          <div class="gallery-content">
+            <h3>ปฏิบัติงานบนโครงสร้างสูงด้วยมาตรฐานความปลอดภัย</h3>
+            <p>ทีมวิศวกรและช่างสำรวจปฏิบัติงานบนโครงสร้างเหล็ก พร้อมอุปกรณ์เซฟตี้เต็มรูปแบบ</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work11.jpg" alt="ตรวจเช็กงานระบบหน้างานจริง" loading="lazy">
+            <div class="gallery-badge">Site Operation</div>
+          </div>
+          <div class="gallery-content">
+            <h3>การตรวจสอบหน้างานและควบคุมงานติดตั้งระบบ</h3>
+            <p>ทีมงานลงพื้นที่ตรวจสอบความถูกต้องของหน้างานจริง เพื่อให้การดำเนินงานเป็นไปตามแผน</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work12.jpg" alt="ทีมงานพร้อมอุปกรณ์เซฟตี้" loading="lazy">
+            <div class="gallery-badge">Professional Team</div>
+          </div>
+          <div class="gallery-content">
+            <h3>ทีมช่างสำรวจมืออาชีพพร้อมอุปกรณ์ครบครัน</h3>
+            <p>ทีมงานภาคสนามพร้อมลุยทุกพื้นที่ ปฏิบัติงานด้วยความปลอดภัยและได้มาตรฐานวิศวกรรม</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work13.jpg" alt="ตรวจสอบระดับผนังอาคาร อ.หนองแค" loading="lazy">
+            <div class="gallery-badge">Wall Leveling</div>
+          </div>
+          <div class="gallery-content">
+            <h3>การตรวจสอบระดับและดิ่งผนังอาคาร (สระบุรี)</h3>
+            <p>ตรวจสอบความเที่ยงตรงของผนังและโครงสร้างอาคารในพื้นที่โครงการก่อสร้าง</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work14.jpg" alt="ปฏิบัติงานตรวจสอบบนนั่งร้าน" loading="lazy">
+            <div class="gallery-badge">Safety Compliance</div>
+          </div>
+          <div class="gallery-content">
+            <h3>การตรวจสอบโครงสร้างบนที่สูงอย่างปลอดภัย</h3>
+            <p>ปฏิบัติงานตรวจสอบหน้างานบนนั่งร้านด้วยความระมัดระวังและสวมใส่อุปกรณ์เซฟตี้ครบถ้วน</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="onsite">
+          <div class="gallery-img-box">
+            <img src="work15.jpg" alt="ตรวจเช็กพื้นที่หน้างานโรงงาน" loading="lazy">
+            <div class="gallery-badge">Factory Survey</div>
+          </div>
+          <div class="gallery-content">
+            <h3>การสำรวจและตรวจสอบพื้นที่ภายในโรงงาน</h3>
+            <p>สำรวจและประเมินพื้นที่หน้างานจริงสำหรับโครงการติดตั้งเครื่องจักรและโครงสร้างโรงงาน</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. ขั้นตอนการทำงาน -->
+  <div id="page-process" class="page-section">
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" data-i18n="procEyebrow">OUR WORKFLOW</div>
+          <h2 data-i18n="procHeading">ขั้นตอนการทำงาน</h2>
+          <p data-i18n="procDesc">ติดต่อทีมงานโดยตรงตั้งแต่ขั้นตอนแรกจนส่งมอบงาน ไม่ผ่านคนกลาง</p>
+        </div>
+        <div class="process-grid">
+          <div class="process">
+            <span>STEP 01</span>
+            <b data-i18n="p1Title">รับรายละเอียดและเสนอราคา</b>
+            <p data-i18n="p1Desc">รับแบบ พิกัดหน้างาน และขอบเขตงาน แล้วประเมินราคาให้ฟรี</p>
+          </div>
+          <div class="process">
+            <span>STEP 02</span>
+            <b data-i18n="p2Title">วางแผนการสำรวจ</b>
+            <p data-i18n="p2Desc">เตรียมทีมงาน เครื่องมือ และข้อมูลอ้างอิงที่จำเป็น</p>
+          </div>
+          <div class="process">
+            <span>STEP 03</span>
+            <b data-i18n="p3Title">ดำเนินงานภาคสนาม</b>
+            <p data-i18n="p3Desc">ปฏิบัติงานตามแผนและข้อกำหนดของโครงการ พร้อมแจ้งความคืบหน้า</p>
+          </div>
+          <div class="process">
+            <span>STEP 04</span>
+            <b data-i18n="p4Title">ตรวจสอบและส่งมอบ</b>
+            <p data-i18n="p4Desc">ตรวจสอบความถูกต้องของข้อมูล แล้วส่งมอบแบบและรายงานตามขอบเขตงาน</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 6. หน้าขอใบเสนอราคา -->
+  <div id="page-quote" class="page-section">
+    <section class="services">
+      <div class="container" style="max-width: 760px;">
+        <div class="section-head">
+          <div class="eyebrow" data-i18n="qEyebrow">REQUEST A QUOTE</div>
+          <h2 data-i18n="qHeading">ขอใบเสนอราคา</h2>
+          <p data-i18n="qDesc">กรอกรายละเอียดเบื้องต้น ทีมงานจะติดต่อกลับเพื่อสรุปขอบเขตงานและเสนอราคาโดยตรง ถ้ามีแบบหรือรูปหน้างาน ส่งทาง LINE ได้เลย</p>
+        </div>
+
+        <form class="quote-form" action="https://formspree.io/f/your_form_id" method="POST">
+          <input type="hidden" name="_subject" value="ขอใบเสนอราคาจากเว็บไซต์">
+          <div class="form-row">
+            <div><label data-i18n="qName">ชื่อ / บริษัท *</label><input type="text" name="name" required></div>
+            <div><label data-i18n="qPhone">เบอร์โทร *</label><input type="tel" name="phone" required></div>
+          </div>
+          <div class="form-row">
+            <div><label data-i18n="qEmail">อีเมล</label><input type="email" name="email"></div>
+            <div><label>LINE</label><input type="text" name="line_id" value="https://line.me/ti/p/kRrU94LL9a"></div>
+          </div>
+          <div>
+            <label data-i18n="qServiceType">ประเภทงาน *</label>
+            <select name="service" id="quoteService" required>
+              <option value="" data-i18n="qSelectDefault">-- เลือกประเภทงาน --</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div><label data-i18n="qProvince">จังหวัดที่ตั้งโครงการ *</label><input type="text" name="province" required></div>
+            <div><label data-i18n="qSize">ขนาดพื้นที่ (ไร่ / ตร.ม. / จำนวนต้นเข็ม)</label><input type="text" name="size"></div>
+          </div>
+          <div><label data-i18n="qDate">ต้องการเริ่มงานประมาณ</label><input type="date" name="start_date"></div>
+          <div><label data-i18n="qDetails">รายละเอียดเพิ่มเติม</label><textarea name="message" rows="4" placeholder="เช่น ใช้ข้อมูลเพื่อออกแบบ / ยื่นขออนุญาต / ส่งมอบโครงการ"></textarea></div>
+          <button type="submit" class="btn" style="width: 100%;" data-i18n="qSubmit">ส่งคำขอใบเสนอราคา ↗</button>
+        </form>
+
+        <p class="quote-alt"><span data-i18n="qAlt1">อยากได้คำตอบไวกว่า?</span> <a href="https://line.me/ti/p/kRrU94LL9a" target="_blank" rel="noopener" data-i18n="qAltLine">ส่งแบบมาทาง LINE</a> <span data-i18n="qAlt2">หรือโทร</span> <a href="tel:PHONE" style="color: var(--green);">PHONE</a></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- 7. ติดต่อเรา -->
+  <div id="page-contact" class="page-section">
+    <section class="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow" data-i18n="cEyebrow">CONTACT US</div>
+          <h2 data-i18n="cHeading">พูดคุยเกี่ยวกับโครงการของคุณ</h2>
+          <p data-i18n="cDesc">ติดต่อ SC Survey & Construction ได้โดยตรง สอบถามข้อมูล ส่งแบบ หรือขอใบเสนอราคา</p>
+
+          <div class="contact-list">
+            <a class="contact-item" href="https://www.google.com/maps/search/?api=1&query=69/69+หมู่ที่+3+ตำบลบางสมัคร+อำเภอบางปะกง+ฉะเชิงเทรา+24180" target="_blank" rel="noopener">
+              <span>⌖</span>
+              69/69 หมู่ที่ 3 ตำบลบางสมัคร อำเภอบางปะกง จังหวัดฉะเชิงเทรา 24180
+            </a>
+            <a class="contact-item" href="tel:PHONE">
+              <span>☎</span>
+              <span data-i18n="cPhone">โทรศัพท์:</span> PHONE
+            </a>
+            <a class="contact-item" href="mailto:EMAIL?subject=สอบถามงานสำรวจ">
+              <span>✉</span>
+              <span data-i18n="cEmail">อีเมล:</span> EMAIL
+            </a>
+            <a class="contact-item" href="https://line.me/ti/p/kRrU94LL9a" target="_blank" rel="noopener">
+              <span class="icon-line">L</span>
+              LINE: kRrU94LL9a
+            </a>
+            <a class="contact-item" href="https://www.facebook.com/share/18kmmJMwjB/" target="_blank" rel="noopener">
+              <span class="icon-fb">f</span>
+              Facebook: SC SURVEY
+            </a>
+            <a class="contact-item" href="https://www.tiktok.com/@dyhq72q1vmgi" target="_blank" rel="noopener">
+              <span class="icon-tiktok">♪</span>
+              TikTok: SC SURVEY
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3 data-i18n="cpHeading">ส่งข้อความหาเรา</h3>
+          <p data-i18n="cpDesc">กรอกข้อมูลรายละเอียดโครงการของคุณ ทีมงานจะติดต่อกลับโดยเร็วที่สุด</p>
+
+          <form action="https://formspree.io/f/your_form_id" method="POST" style="display: grid; gap: 12px;">
+            <input type="hidden" name="_subject" value="ข้อความติดต่อจากเว็บไซต์">
+            <div>
+              <label data-i18n="cpName">ชื่อ-นามสกุล / ชื่อบริษัท</label>
+              <input type="text" name="name" required>
+            </div>
+            <div>
+              <label data-i18n="cpContact">เบอร์โทรศัพท์ / อีเมลติดต่อ</label>
+              <input type="text" name="contact_info" required>
+            </div>
+            <div>
+              <label data-i18n="cpMsg">ข้อความ / รายละเอียดงานสำรวจ</label>
+              <textarea name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; margin-top: 5px;" data-i18n="cpSubmit">ส่งข้อความ ↗</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<!-- ปุ่ม LINE ลอยมุมขวาล่าง -->
+<a class="line-float" href="https://line.me/ti/p/kRrU94LL9a" target="_blank" rel="noopener" aria-label="แอดไลน์">LINE</a>
+
+<footer>
+  <div class="container footer-row">
+    <span>© <span id="year"></span> SC Survey & Construction Co., Ltd. All rights reserved.</span>
+    <span>Survey · Construction · Engineering</span>
+  </div>
+</footer>
+
+<script>
+// =====================================================
+// ระบบ 3 ภาษา (TH / EN / ZH)
+// =====================================================
+const translations = {
+  th: {
+    navHome: "หน้าแรก", navServices: "บริการของเรา", navPortfolio: "ผลงาน", navProcess: "ขั้นตอนการทำงาน", navQuote: "ขอใบเสนอราคา", navContact: "ติดต่อเรา",
+    btnQuoteTop: "ขอใบเสนอราคา ↗",
+    heroBadge: "✓ ทีมสำรวจภาคสนามตัวจริง · คุยตรง ไม่ผ่านคนกลาง",
+    heroTitle: "สำรวจอย่างแม่นยำ<br><span>ก่อสร้างอย่างมั่นใจ</span><br>รับงานทั่วประเทศ",
+    heroDesc: "SC Survey & Construction ให้บริการงานสำรวจวิศวกรรมครบวงจร ตั้งแต่สำรวจภูมิประเทศ วางผังและตรวจสอบเสาเข็ม สำรวจด้วยโดรน ตรวจวัดการทรุดตัว ไปจนถึงงาน As-Built ติดต่อทีมงานได้โดยตรง ประเมินราคาไว ส่งมอบข้อมูลตามมาตรฐานโครงการ",
+    btnCall: "☎ โทร", btnLine: "💬 แอดไลน์", btnRequestQuote: "📝 ขอใบเสนอราคา",
+    chipTopo: "สำรวจภูมิประเทศ", chipPile: "วาง/ตรวจเสาเข็ม", chipDrone: "โดรน UAV", chipSettle: "ตรวจวัดการทรุดตัว", chipVol: "ปริมาตรดิน", chipHydro: "สำรวจใต้น้ำ", chipAll: "บริการทั้งหมด →",
+    stat1Title: "คุยตรงกับทีมงาน", stat1Desc: "ไม่ผ่านคนกลาง ตอบไว",
+    stat2Title: "ประเมินราคาฟรี", stat2Desc: "ส่งแบบหรือพิกัดหน้างานทาง LINE",
+    stat3Title: "รับงานทั่วประเทศ", stat3Desc: "ทีมภาคสนามพร้อมเครื่องมือ",
+    confHeading: "มั่นใจได้ทุกขั้นตอน",
+    conf1Title: "ตรวจสอบข้อมูลก่อนส่งมอบทุกครั้ง", conf1Desc: "ข้อมูลทุกชุดผ่านการตรวจสอบซ้ำทั้งหน้างานและในสำนักงาน ส่งมอบในรูปแบบที่ทีมออกแบบและผู้รับเหมานำไปใช้งานต่อได้ทันที",
+    conf2Title: "ทีมงานประสบการณ์สูง", conf2Desc: "ผ่านงานภาคสนามมาแล้วหลากหลายรูปแบบ ทั้งงานอาคาร โรงงาน คลังสินค้า และโครงสร้างพื้นฐาน", confLink: "ดูผลงานของเรา →",
+    conf3Title: "รับงานทั่วประเทศ", conf3Desc: "มีความพร้อมด้านทีมงานภาคสนามและเครื่องมือสำรวจทันสมัย พร้อมเดินทางปฏิบัติงานทุกจังหวัดทั่วประเทศไทย",
+    conf4Title: "ทำงานตามมาตรฐานและข้อกำหนดของโครงการ", conf4Desc: "เครื่องมือผ่านการสอบเทียบ (Calibration) ปฏิบัติงานตามข้อกำหนดของแต่ละโครงการ พร้อมเอกสารประกอบครบถ้วน",
+    servEyebrow: "SURVEY SERVICES", servHeading: "บริการงานสำรวจวิศวกรรมครบวงจร",
+    servDesc: "ให้บริการงานสำรวจวิศวกรรมสำหรับโครงการก่อสร้าง โรงงาน คลังสินค้า อาคาร และงานพัฒนาอสังหาริมทรัพย์ ตั้งแต่งานสำรวจเบื้องต้น งานควบคุมการก่อสร้าง งานตรวจสอบ ไปจนถึงงานสำรวจเพื่อส่งมอบโครงการ กดที่บริการเพื่อดูรายละเอียด",
+    delivTitle: "รูปแบบงานส่งมอบ / DELIVERABLES", delivDesc: "DWG, PDF, CSV, Excel, Civil 3D, ตารางพิกัด, รายงานผลสำรวจ, Photo Report, Method Statement และ Calibration Certificate ตามข้อกำหนดของแต่ละโครงการ",
+    sdBack: "← กลับไปหน้าบริการทั้งหมด",
+    sdScopeTitle: "ขอบเขตงานที่เราทำ", sdToolsTitle: "เครื่องมือที่ใช้", sdDeliverTitle: "สิ่งที่ลูกค้าจะได้รับ", sdPhotosTitle: "ภาพงานจริงจากทีมเรา",
+    sdSideHeading: "สนใจบริการนี้?", sdSideDesc: "ส่งตำแหน่งหน้างาน ขนาดพื้นที่ หรือแบบก่อสร้างมาให้ดูได้เลย ทีมงานประเมินราคาให้ฟรี", sdLineBtn: "💬 ส่งแบบทาง LINE",
+    filterAll: "ทั้งหมด", filterLand: "ภาคพื้นดิน", filterWater: "ท้องน้ำ", filterVol: "ปริมาณดิน", filterPile: "เสาเข็ม",
+    work1Title: "ทีมสำรวจ GPS RTK เก็บพิกัดหน้างานจริง", work1Desc: "การกำหนดหมุดควบคุมและตรวจสอบค่าพิกัดความละเอียดสูงหน้างานก่อสร้าง",
+    work2Title: "สำรวจทางอากาศด้วยโดรนสำรวจ", work2Desc: "จัดทำแผนที่ Orthophoto และแบบจำลองภูมิประเทศ 3 มิติ",
+    work3Title: "สำรวจภูมิประเทศใต้น้ำ", work3Desc: "ตรวจวัดระดับท้องน้ำและความลึกคลองหรืออ่างเก็บน้ำ",
+    work4Title: "คำนวณปริมาตรดินตัดและดินถม", work4Desc: "สำรวจพื้นที่และประเมินปริมาณงานดินสำหรับโครงการก่อสร้างขนาดใหญ่",
+    work5Title: "ตรวจสอบตำแหน่งเสาเข็มอาคาร", work5Desc: "ตรวจสอบค่าพิกัดและการเยื้องศูนย์ของเสาเข็มหลังการติดตั้ง",
+    work6Title: "งานวางผังและตั้งกล้องสำรวจ", work6Desc: "วางแนวแกนอาคาร (Grid Line) และระดับโครงสร้างพื้นฐาน",
+    procEyebrow: "OUR WORKFLOW", procHeading: "ขั้นตอนการทำงาน", procDesc: "ติดต่อทีมงานโดยตรงตั้งแต่ขั้นตอนแรกจนส่งมอบงาน ไม่ผ่านคนกลาง",
+    p1Title: "รับรายละเอียดและเสนอราคา", p1Desc: "รับแบบ พิกัดหน้างาน และขอบเขตงาน แล้วประเมินราคาให้ฟรี",
+    p2Title: "วางแผนการสำรวจ", p2Desc: "เตรียมทีมงาน เครื่องมือ และข้อมูลอ้างอิงที่จำเป็น",
+    p3Title: "ดำเนินงานภาคสนาม", p3Desc: "ปฏิบัติงานตามแผนและข้อกำหนดของโครงการ พร้อมแจ้งความคืบหน้า",
+    p4Title: "ตรวจสอบและส่งมอบ", p4Desc: "ตรวจสอบความถูกต้องของข้อมูล แล้วส่งมอบแบบและรายงานตามขอบเขตงาน",
+    qEyebrow: "REQUEST A QUOTE", qHeading: "ขอใบเสนอราคา", qDesc: "กรอกรายละเอียดเบื้องต้น ทีมงานจะติดต่อกลับเพื่อสรุปขอบเขตงานและเสนอราคาโดยตรง ถ้ามีแบบหรือรูปหน้างาน ส่งทาง LINE ได้เลย",
+    qName: "ชื่อ / บริษัท *", qPhone: "เบอร์โทร *", qEmail: "อีเมล", qServiceType: "ประเภทงาน *", qSelectDefault: "-- เลือกประเภทงาน --", qProvince: "จังหวัดที่ตั้งโครงการ *", qSize: "ขนาดพื้นที่ (ไร่ / ตร.ม. / จำนวนต้นเข็ม)", qDate: "ต้องการเริ่มงานประมาณ", qDetails: "รายละเอียดเพิ่มเติม", qSubmit: "ส่งคำขอใบเสนอราคา ↗",
+    qAlt1: "อยากได้คำตอบไวกว่า?", qAltLine: "ส่งแบบมาทาง LINE", qAlt2: "หรือโทร",
+    cEyebrow: "CONTACT US", cHeading: "พูดคุยเกี่ยวกับโครงการของคุณ", cDesc: "ติดต่อ SC Survey & Construction ได้โดยตรง สอบถามข้อมูล ส่งแบบ หรือขอใบเสนอราคา",
+    cPhone: "โทรศัพท์:", cEmail: "อีเมล:", cpHeading: "ส่งข้อความหาเรา", cpDesc: "กรอกข้อมูลรายละเอียดโครงการของคุณ ทีมงานจะติดต่อกลับโดยเร็วที่สุด",
+    cpName: "ชื่อ-นามสกุล / ชื่อบริษัท", cpContact: "เบอร์โทรศัพท์ / อีเมลติดต่อ", cpMsg: "ข้อความ / รายละเอียดงานสำรวจ", cpSubmit: "ส่งข้อความ ↗",
+    otherService: "อื่น ๆ / หลายงานรวมกัน", seeDetails: "ดูรายละเอียด →"
+  },
+  en: {
+    navHome: "Home", navServices: "Services", navPortfolio: "Portfolio", navProcess: "Workflow", navQuote: "Get Quote", navContact: "Contact",
+    btnQuoteTop: "Get Quote ↗",
+    heroBadge: "✓ Professional Field Survey Team · Direct Contact, No Middlemen",
+    heroTitle: "Precise Surveying<br><span>Confident Construction</span><br>Nationwide Service",
+    heroDesc: "SC Survey & Construction provides comprehensive engineering surveying services from topographic surveys, pile setting out & checking, UAV drone surveys, settlement monitoring to As-Built surveys. Contact us directly for fast quotation and professional delivery.",
+    btnCall: "☎ Call", btnLine: "💬 Add LINE", btnRequestQuote: "📝 Request Quote",
+    chipTopo: "Topographic", chipPile: "Pile Setting", chipDrone: "UAV Drone", chipSettle: "Settlement", chipVol: "Earthwork", chipHydro: "Hydrographic", chipAll: "All Services →",
+    stat1Title: "Direct Contact", stat1Desc: "No middlemen, fast response",
+    stat2Title: "Free Estimation", stat2Desc: "Send drawings/coordinates via LINE",
+    stat3Title: "Nationwide", stat3Desc: "Field teams with modern equipment",
+    confHeading: "Confidence in Every Step",
+    conf1Title: "Data Verification Before Delivery", conf1Desc: "Every dataset is rigorously checked both in the field and office, delivered in formats ready for design and construction teams.",
+    conf2Title: "Experienced Team", conf2Desc: "Successfully delivered various projects including buildings, factories, warehouses, and infrastructure.", confLink: "View Portfolio →",
+    conf3Title: "Nationwide Coverage", conf3Desc: "Fully equipped with modern surveying instruments and ready to travel across all provinces in Thailand.",
+    conf4Title: "Project Standards Compliant", conf4Desc: "Instruments are calibrated and operations strictly follow project specifications with complete documentation.",
+    servEyebrow: "SURVEY SERVICES", servHeading: "Comprehensive Engineering Survey Services",
+    servDesc: "Providing engineering survey services for construction projects, factories, warehouses, buildings, and real estate development. Click any service to view details.",
+    delivTitle: "DELIVERABLES", delivDesc: "DWG, PDF, CSV, Excel, Civil 3D, coordinate tables, survey reports, photo reports, method statements, and calibration certificates as required.",
+    sdBack: "← Back to all services",
+    sdScopeTitle: "Scope of Work", sdToolsTitle: "Equipment Used", sdDeliverTitle: "What You Will Receive", sdPhotosTitle: "Field Photos",
+    sdSideHeading: "Interested in this service?", sdSideDesc: "Send your site location, area size, or drawings for a free quotation.", sdLineBtn: "💬 Send via LINE",
+    filterAll: "All", filterLand: "Land", filterWater: "Water", filterVol: "Earthwork", filterPile: "Piles",
+    work1Title: "GPS RTK Survey Team collecting real site coordinates", work1Desc: "Establishing control points and high-precision coordinate verification.",
+    work2Title: "Aerial survey using UAV drone", work2Desc: "Orthophoto mapping and 3D terrain modeling.",
+    work3Title: "Hydrographic Survey", work3Desc: "Waterbed level and depth measurement for canals or reservoirs.",
+    work4Title: "Cut & Fill Volume Calculation", work4Desc: "Site surveying and earthwork volume estimation for large projects.",
+    work5Title: "Building Pile Position Check", work5Desc: "Verifying coordinates and offset X/Y of piles after installation.",
+    work6Title: "Setting Out & Total Station Setup", work6Desc: "Grid line alignment and structural level setup.",
+    procEyebrow: "OUR WORKFLOW", procHeading: "Our Workflow", procDesc: "Direct communication with our team from start to finish.",
+    p1Title: "Receive Details & Quote", p1Desc: "Send drawings and scope for a free quotation.",
+    p2Title: "Survey Planning", p2Desc: "Prepare team, equipment, and reference data.",
+    p3Title: "Field Operation", p3Desc: "Execute according to project plans and specifications.",
+    p4Title: "Check & Deliver", p4Desc: "Verify data accuracy and deliver reports and drawings.",
+    qEyebrow: "REQUEST A QUOTE", qHeading: "Get a Quotation", qDesc: "Fill in basic details and we will get back to you quickly. You can also send drawings via LINE.",
+    qName: "Name / Company *", qPhone: "Phone *", qEmail: "Email", qServiceType: "Service Type *", qSelectDefault: "-- Select Service --", qProvince: "Province *", qSize: "Area Size (Rai / Sq.m. / Piles)", qDate: "Estimated Start Date", qDetails: "Additional Details", qSubmit: "Submit Request ↗",
+    qAlt1: "Want a faster reply?", qAltLine: "Send via LINE", qAlt2: "or call",
+    cEyebrow: "CONTACT US", cHeading: "Let's Talk About Your Project", cDesc: "Contact SC Survey & Construction directly for inquiries, drawings, or quotes.",
+    cPhone: "Phone:", cEmail: "Email:", cpHeading: "Send Us a Message", cpDesc: "Fill out your project details and our team will contact you shortly.",
+    cpName: "Name / Company", cpContact: "Phone / Email", cpMsg: "Message / Survey Details", cpSubmit: "Send Message ↗",
+    otherService: "Other / Multiple Services", seeDetails: "View Details →"
+  },
+  zh: {
+    navHome: "首页", navServices: "我们的服务", navPortfolio: "工程案例", navProcess: "工作流程", navQuote: "获取报价", navContact: "联系我们",
+    btnQuoteTop: "获取报价 ↗",
+    heroBadge: "✓ 专业现场测绘团队 · 直接对接，无中间商",
+    heroTitle: "精准测量<br><span>安心建设</span><br>承接全泰国业务",
+    heroDesc: "SC Survey & Construction 提供全面的工程测绘服务，包括地形测绘、桩位放样与检测、无人机航测、沉降监测及竣工测量（As-Built）。欢迎直接联系我们，快速获取报价并按标准交付数据。",
+    btnCall: "☎ 电话", btnLine: "💬 添加LINE", btnRequestQuote: "📝 获取报价",
+    chipTopo: "地形测绘", chipPile: "桩位放样", chipDrone: "无人机航测", chipSettle: "沉降监测", chipVol: "土方计算", chipHydro: "水下测绘", chipAll: "全部服务 →",
+    stat1Title: "直接对接", stat1Desc: "无中间商，快速响应",
+    stat2Title: "免费评估", stat2Desc: "通过LINE发送图纸或坐标",
+    stat3Title: "全泰服务", stat3Desc: "专业外业团队与先进设备",
+    confHeading: "每一步都值得信赖",
+    conf1Title: "交付前严格数据审核", conf1Desc: "所有数据集均经过内业与外业双重严格校验，以设计和施工团队可直接使用的格式交付。",
+    conf2Title: "经验丰富的团队", conf2Desc: "成功交付各类项目，包括建筑、工厂、仓库及基础建设。", confLink: "查看案例 →",
+    conf3Title: "全泰服务能力", conf3Desc: "配备现代化的测绘仪器，可前往泰国全境各府进行作业。",
+    conf4Title: "严格遵守项目标准", conf4Desc: "所有仪器均经过校准（Calibration），严格按照项目规范及完整文档执行。",
+    servEyebrow: "SURVEY SERVICES", servHeading: "全方位工程测绘服务",
+    servDesc: "为建筑、工厂、仓库、大楼及房地产开发项目提供工程测绘服务。点击任意服务查看详细信息。",
+    delivTitle: "交付成果 / DELIVERABLES", delivDesc: "根据项目要求提供 DWG, PDF, CSV, Excel, Civil 3D、坐标表、测绘报告、照片报告、施工方案及校准证书。",
+    sdBack: "← 返回所有服务",
+    sdScopeTitle: "服务范围", sdToolsTitle: "使用仪器", sdDeliverTitle: "客户所得成果", sdPhotosTitle: "现场照片",
+    sdSideHeading: "对该服务感兴趣？", sdSideDesc: "立即发送您的项目位置、面积大小或图纸，团队将为您免费评估报价。", sdLineBtn: "💬 通过LINE发送",
+    filterAll: "全部", filterLand: "陆地", filterWater: "水域", filterVol: "土方", filterPile: "桩基",
+    work1Title: "GPS RTK 测绘团队现场采集坐标", work1Desc: "高精度控制点布设与坐标检核。",
+    work2Title: "无人机航空测绘", work2Desc: "正射影像图（Orthophoto）及三维地形建模。",
+    work3Title: "水下地形测绘", work3Desc: "运河或水库底标高及深度测量。",
+    work4Title: "挖填方土方量计算", work4Desc: "大型项目的场地测绘与土方量评估。",
+    work5Title: "建筑桩位检测", work5Desc: "施工后桩位坐标及偏移量（Offset X/Y）检核。",
+    work6Title: "放样与全站仪架设", work6Desc: "建筑轴线（Grid Line）放样与基础标高测设。",
+    procEyebrow: "OUR WORKFLOW", procHeading: "工作流程", procDesc: "从始至终与我们的团队直接沟通，绝无中间环节。",
+    p1Title: "接收需求与报价", p1Desc: "接收图纸与工作范围，免费为您评估报价。",
+    p2Title: "测绘规划", p2Desc: "准备外业团队、仪器及参考资料。",
+    p3Title: "现场作业", p3Desc: "严格按照项目计划与规范执行。",
+    p4Title: "检查与交付", p4Desc: "核对数据准确性并按规定交付报告与图纸。",
+    qEyebrow: "REQUEST A QUOTE", qHeading: "获取报价", qDesc: "填写基础信息，我们将尽快与您联系。如有图纸或现场照片可通过LINE直接发送。",
+    qName: "姓名 / 公司名称 *", qPhone: "电话 *", qEmail: "电子邮箱", qServiceType: "服务类型 *", qSelectDefault: "-- 请选择服务 --", qProvince: "项目所在府 *", qSize: "面积大小 (莱 / 平方米 / 桩数)", qDate: "预计开工日期", qDetails: "详细说明", qSubmit: "提交报价请求 ↗",
+    qAlt1: "想要更快回复？", qAltLine: "通过LINE发送", qAlt2: "或致电",
+    cEyebrow: "CONTACT US", cHeading: "探讨您的项目需求", cDesc: "直接联系 SC Survey & Construction 咨询信息、发送图纸或获取报价。",
+    cPhone: "电话：", cEmail: "邮箱：", cpHeading: "给我们留言", cpDesc: "填写您的项目详情，我们的团队将尽快与您联系。",
+    cpName: "姓名 / 公司名称", cpContact: "电话 / 邮箱", cpMsg: "留言 / 测绘需求详情", cpSubmit: "发送留言 ↗",
+    otherService: "其他 / 综合服务", seeDetails: "查看详情 →"
+  }
+};
+
+let currentLang = 'th';
+
+const services = [
+  {
+    key: 'topo', tag: 'TOPOGRAPHIC SURVEY',
+    title: { th: 'งานสำรวจภูมิประเทศ', en: 'Topographic Survey', zh: '地形测绘' },
+    short: { th: 'สำรวจตำแหน่งสิ่งปลูกสร้าง ถนน รั้ว ระบบระบายน้ำ สาธารณูปโภค ระดับพื้นที่ และจัดทำเส้น Contour พร้อมแบบ DWG / PDF / Civil 3D', en: 'Surveying structures, roads, drainage, utilities, and terrain levels with Contour drawings.', zh: '测绘建筑物、道路、排水、公用设施及地形标高，提供等高线图。' },
+    intro: { th: 'เก็บข้อมูลสภาพพื้นที่จริง ทั้งตำแหน่งสิ่งปลูกสร้าง ถนน ระบบระบายน้ำ และระดับดิน เพื่อใช้ออกแบบโครงการ ประเมินงานดิน หรือประกอบการยื่นขออนุญาต', en: 'Gathering actual site conditions including structures, roads, drainage, and ground levels for design and permitting.', zh: '采集实际现场条件，包括建筑物、道路、排水及地面标高，用于项目设计与报建。' },
+    scope: {
+      th: ['สำรวจตำแหน่งอาคาร รั้ว ถนน เสาไฟ และสาธารณูปโภค', 'เก็บค่าระดับพื้นที่แบบ Grid หรือตามจุดสำคัญ', 'สำรวจท่อและบ่อพักระบบระบายน้ำ', 'เชื่อมโยงหมุดควบคุมเข้ากับระบบพิกัดของโครงการ'],
+      en: ['Survey buildings, fences, roads, and utilities', 'Grid or spot level data collection', 'Drainage pipe and manhole survey', 'Link control points to project coordinate system'],
+      zh: ['测绘建筑物、围墙、道路及公用设施', '网格或散点标高数据采集', '排水管网及检查井测绘', '将控制点连接至项目坐标系']
+    },
+    tools: ['GNSS RTK', 'Total Station', 'Auto Level', 'UAV Drone'],
+    deliver: {
+      th: ['แบบ Topographic Survey (DWG / Civil 3D / PDF)', 'เส้นชั้นความสูง (Contour)', 'ตารางพิกัดและค่าระดับ (Excel / CSV)', 'Photo Report หน้างาน'],
+      en: ['Topographic Map (DWG / Civil 3D / PDF)', 'Contour Lines', 'Coordinate & Level Table (Excel / CSV)', 'Field Photo Report'],
+      zh: ['地形图 (DWG / Civil 3D / PDF)', '等高线', '坐标及标高表 (Excel / CSV)', '现场照片报告']
+    }
+  },
+  {
+    key: 'gnss', tag: 'GNSS / RTK SURVEY',
+    title: { th: 'งานสำรวจพิกัด GNSS / RTK', en: 'GNSS / RTK Survey', zh: 'GNSS / RTK 坐标测绘' },
+    short: { th: 'กำหนดและตรวจสอบค่าพิกัด Northing, Easting และระดับ รวมถึงการเชื่อมโยงหมุดควบคุมและระบบพิกัดอ้างอิงของโครงการ', en: 'Establish and verify Northing, Easting coordinates and levels, linking control points to project references.', zh: '测设并检核平面坐标及高程，将控制点与项目参考坐标系联测。' },
+    intro: { th: 'กำหนดและตรวจสอบค่าพิกัด N, E และค่าระดับด้วยเครื่องรับสัญญาณดาวเทียมความแม่นยำสูง พร้อมเชื่อมโยงเข้ากับระบบพิกัดที่โครงการใช้งาน', en: 'High-precision satellite receiver coordinate and level setup linked to your project coordinate system.', zh: '使用高精度卫星接收机测设坐标与高程，并与项目坐标系统联测。' },
+    scope: {
+      th: ['วัดค่าพิกัดหมุดควบคุมและจุดสำคัญของโครงการ', 'ตรวจสอบค่าพิกัดหมุดเดิมเทียบกับข้อมูลอ้างอิง', 'แปลงค่าระหว่างระบบพิกัด เช่น UTM WGS84 / Local Grid', 'ส่งค่าพิกัดให้ผู้รับเหมาและทีมออกแบบใช้งานต่อ'],
+      en: ['Measure control and key project points', 'Verify existing control points', 'Transform coordinates (UTM WGS84 / Local Grid)', 'Deliver coordinates to contractors and designers'],
+      zh: ['测量控制点及项目关键点', '检核原有控制点坐标', '坐标系统转换 (UTM WGS84 / 地方坐标系)', '向施工方和设计团队交付坐标']
+    },
+    tools: ['GNSS RTK', 'Coordinate Processing Software'],
+    deliver: {
+      th: ['ตารางพิกัด N / E / ระดับ (Excel / CSV)', 'ผังตำแหน่งหมุด (DWG / PDF)', 'รายงานผลการตรวจสอบพิกัด'],
+      en: ['Coordinate & Level Table (Excel / CSV)', 'Control Point Layout (DWG / PDF)', 'Verification Report'],
+      zh: ['坐标及高程表 (Excel / CSV)', '控制点布设图 (DWG / PDF)', '检核报告']
+    }
+  },
+  {
+    key: 'control', tag: 'CONTROL & BENCHMARK',
+    title: { th: 'งานวางหมุดควบคุมและหมุดระดับ', tag: 'CONTROL & BENCHMARK', en: 'Control & Benchmark Setup', zh: '控制点与水准点布设' },
+    short: { th: 'จัดทำ Traverse Control, Benchmark (BM) และ Temporary Benchmark (TBM) สำหรับควบคุมตำแหน่งและระดับในงานก่อสร้าง', en: 'Establish Traverse Control, Benchmark (BM) and TBM for construction control.', zh: '建立导线控制网、基准点 (BM) 及临时水准点 (TBM) 用于施工控制。' },
+    intro: { th: 'วางโครงข่ายหมุดควบคุมทางราบและทางดิ่ง ใช้เป็นฐานอ้างอิงตำแหน่งและระดับตลอดอายุการก่อสร้าง', en: 'Establish horizontal and vertical control networks as reference bases throughout construction.', zh: '建立平面及高程控制网，作为整个施工期间的定位与标高基准。' },
+    scope: {
+      th: ['สำรวจวงรอบ Traverse Control รอบพื้นที่โครงการ', 'ถ่ายระดับจาก BM อ้างอิงมายังหมุด TBM ในโครงการ', 'ก่อสร้างหมุดถาวรและหมุดชั่วคราว', 'ตรวจสอบค่าปิดวงรอบและงานระดับ'],
+      en: ['Perform Traverse Control survey around site', 'Transfer levels from reference BM to project TBM', 'Construct permanent and temporary markers', 'Check closure and leveling errors'],
+      zh: ['布设项目周边导线控制网', '将参考水准点高程引测至项目TBM', '构筑永久及临时标石', '进行闭合差及水准检核']
+    },
+    tools: ['Total Station', 'Auto Level', 'GNSS RTK'],
+    deliver: {
+      th: ['ตารางพิกัดและค่าระดับหมุด', 'Description Card ของหมุดแต่ละตัว', 'ผังตำแหน่งหมุดควบคุม (DWG / PDF)'],
+      en: ['Coordinate and level table', 'Description cards for each marker', 'Control point layout plan (DWG / PDF)'],
+      zh: ['坐标及高程表', '控制点点之记说明卡', '控制点布设图 (DWG / PDF)']
+    }
+  },
+  {
+    key: 'setout', tag: 'CONSTRUCTION SETTING OUT',
+    title: { th: 'งานสำรวจเพื่อการก่อสร้าง', en: 'Construction Setting Out', zh: '施工放样测量' },
+    short: { th: 'วางตำแหน่ง Grid Line, Column, Foundation, Anchor Bolt, Building Line และองค์ประกอบต่าง ๆ ตามแบบก่อสร้าง', en: 'Set out grid lines, columns, foundations, anchor bolts, and building lines according to drawings.', zh: '根据施工图纸进行轴线、柱位、基础、地脚螺栓及建筑边线放样。' },
+    intro: { th: 'ถ่ายตำแหน่งจากแบบก่อสร้างลงหน้างานจริง ให้ผู้รับเหมาทำงานได้ถูกตำแหน่งและถูกระดับตั้งแต่แรก ลดงานรื้อแก้', en: 'Transfer construction designs to the actual site so contractors can build accurately from the start.', zh: '将设计图纸精准放样至施工现场，确保施工单位从一开始就准确就位，减少返工。' },
+    scope: {
+      th: ['วาง Grid Line และ Building Line', 'วางตำแหน่งเสา ฐานราก และ Anchor Bolt', 'ส่งค่าระดับให้งานพื้นและงานโครงสร้าง', 'ตรวจสอบตำแหน่งแบบหล่อก่อนเทคอนกรีต'],
+      en: ['Set out Grid Lines and Building Lines', 'Set out columns, foundations, and anchor bolts', 'Provide levels for slabs and structures', 'Check formwork positioning before concreting'],
+      zh: ['轴线及建筑边线放样', '柱位、基础及地脚螺栓放样', '提供楼板及结构标高', '混凝土浇筑前模板位置复核']
+    },
+    tools: ['Total Station', 'Auto Level', 'GNSS RTK'],
+    deliver: {
+      th: ['บันทึกการวางผังหน้างาน', 'ตารางพิกัดจุดที่วาง', 'Photo Report'],
+      en: ['Setting out records', 'Coordinate table of set out points', 'Photo Report'],
+      zh: ['放样记录表', '放样点坐标表', '照片报告']
+    }
+  },
+  {
+    key: 'pile', tag: 'PILE SETTING OUT & CHECK',
+    title: { th: 'งานวางตำแหน่งและตรวจสอบเสาเข็ม', en: 'Pile Setting Out & Check', zh: '桩位放样与检测' },
+    short: { th: 'วางตำแหน่งเสาเข็มก่อนก่อสร้าง และตรวจสอบค่าคลาดเคลื่อนตำแหน่งเสาเข็มหลังติดตั้ง พร้อมสรุป Offset X/Y', en: 'Set out piles before construction and check pile deviations after installation with Offset X/Y summary.', zh: '施工前桩位放样，施工后桩位偏差检测并汇总 Offset X/Y。' },
+    intro: { th: 'วางตำแหน่งเสาเข็มตามแบบก่อนตอกหรือเจาะ และตรวจสอบค่าเยื้องศูนย์หลังติดตั้ง เพื่อให้วิศวกรประเมินและแก้ไขฐานรากได้ทันเวลา', en: 'Set out piles according to drawings and verify deviations after installation for engineering evaluation.', zh: '根据图纸进行桩位放样，并在施工后检测偏移量，供工程师及时评估和处理基础。' },
+    scope: {
+      th: ['วางตำแหน่งเสาเข็มตามแบบก่อสร้าง', 'ตรวจสอบตำแหน่งเสาเข็มหลังตอกหรือเจาะ', 'สรุปค่าเยื้องศูนย์ Offset X/Y ทุกต้น', 'ตรวจสอบระดับหัวเสาเข็ม'],
+      en: ['Set out pile positions per design', 'Verify pile positions after driving/drilling', 'Summarize Offset X/Y for all piles', 'Check pile cut-off levels'],
+      zh: ['按设计图纸进行桩位放样', '沉桩或钻孔后进行桩位复核', '汇总所有桩的 Offset X/Y 偏差', '桩顶标高检测']
+    },
+    tools: ['Total Station', 'GNSS RTK', 'Auto Level'],
+    deliver: {
+      th: ['ตาราง Pile Offset X/Y (Excel)', 'แบบแสดงตำแหน่งเสาเข็มจริง (DWG / PDF)', 'Photo Report'],
+      en: ['Pile Offset X/Y Table (Excel)', 'As-built pile layout (DWG / PDF)', 'Photo Report'],
+      zh: ['桩位偏差 Offset X/Y 表 (Excel)', '实际桩位竣工图 (DWG / PDF)', '照片报告']
+    }
+  },
+  {
+    key: 'gfa', tag: 'GROSS FLOOR AREA',
+    title: { th: 'งานตรวจวัดพื้นที่อาคาร (GFA)', en: 'Gross Floor Area (GFA) Survey', zh: '建筑面积测量 (GFA)' },
+    short: { th: 'สำรวจและคำนวณ Gross Floor Area (GFA) พร้อม Summary Table, Drawing และ Photo Report', en: 'Survey and calculate Gross Floor Area (GFA) with summary tables, drawings, and photo reports.', zh: '测算建筑总面积 (GFA)，提供汇总表、图纸及照片报告。' },
+    intro: { th: 'วัดพื้นที่อาคารจริงทุกชั้นและคำนวณ GFA เพื่อใช้ตรวจรับอาคาร ทำสัญญาซื้อขายหรือเช่า และประเมินทรัพย์สิน', en: 'Measure actual building areas across all floors to calculate GFA for handover, leasing, and valuation.', zh: '实测各层建筑面积并计算 GFA，用于物业验收、租赁合同及资产评估。' },
+    scope: {
+      th: ['วัดขนาดพื้นที่จริงของแต่ละชั้น', 'แยกประเภทพื้นที่ตามเกณฑ์ที่ลูกค้ากำหนด', 'เปรียบเทียบพื้นที่จริงกับแบบ', 'สรุปพื้นที่รวมทั้งอาคาร'],
+      en: ['Measure actual floor dimensions', 'Categorize areas per client criteria', 'Compare actual area with drawings', 'Summarize total building area'],
+      zh: ['实测各层实际尺寸', '按客户标准分类面积', '实际面积与图纸对比', '汇总建筑总面积']
+    },
+    tools: ['Laser Distance Meter', 'Total Station'],
+    deliver: {
+      th: ['Summary Table พื้นที่ (Excel)', 'แบบแสดงขอบเขตพื้นที่ (DWG / PDF)', 'Photo Report'],
+      en: ['GFA Summary Table (Excel)', 'Floor boundary drawing (DWG / PDF)', 'Photo Report'],
+      zh: ['面积汇总表 (Excel)', '面积边界图 (DWG / PDF)', '照片报告']
+    }
+  },
+  {
+    key: 'monthly', tag: 'MONTHLY SITE SURVEY',
+    title: { th: 'งานสำรวจรายเดือนประจำโครงการ', en: 'Monthly Site Survey Service', zh: '项目常驻月度测绘' },
+    short: { th: 'ให้บริการทีมสำรวจประจำโครงการแบบรายเดือน สำหรับงาน Setting Out, ตรวจสอบพิกัดและระดับ, Pile Check, As-Built, Settlement และรายงานประจำเดือน', en: 'Monthly dedicated survey team for setting out, coordination, pile check, as-built, and settlement monitoring.', zh: '提供项目常驻月度测绘团队，承接放样、坐标复核、桩检、竣工测量、沉降监测及月度报告。' },
+    intro: { th: 'ทีมสำรวจพร้อมเครื่องมือประจำโครงการแบบรายเดือน ผู้รับเหมาไม่ต้องจ้างและดูแลทีมสำรวจเอง เรียกใช้งานได้ตามแผนงานก่อสร้าง', en: 'Dedicated survey team with instruments stationed at your project. No need to manage your own survey staff.', zh: '配备专业测绘团队及仪器常驻项目，施工方无需自行管理测绘人员，可随叫随到。' },
+    scope: {
+      th: ['Setting Out ตามแผนงานก่อสร้าง', 'ตรวจสอบพิกัดและระดับ / Pile Check', 'สำรวจ As-Built ระหว่างก่อสร้าง', 'ตรวจวัดการทรุดตัว', 'จัดทำรายงานประจำเดือน'],
+      en: ['Setting out per construction schedule', 'Coordinate & level checks / Pile checks', 'Progress As-Built surveys', 'Settlement monitoring', 'Monthly reporting'],
+      zh: ['根据施工计划进行放样', '坐标与标高复核 / 桩检', '施工过程竣工测量', '沉降监测', '编制月度报告']
+    },
+    tools: ['Total Station', 'GNSS RTK', 'Auto Level'],
+    deliver: {
+      th: ['รายงานประจำเดือน', 'ข้อมูลและแบบของทุกงานที่ทำ', 'Calibration Certificate ของเครื่องมือ'],
+      en: ['Monthly Report', 'All survey data and drawings', 'Instrument Calibration Certificates'],
+      zh: ['月度报告', '所有测绘数据与图纸', '仪器校准证书']
+    }
+  },
+  {
+    key: 'settlement', tag: 'SETTLEMENT MONITORING',
+    title: { th: 'งานตรวจวัดการทรุดตัว', en: 'Settlement Monitoring', zh: '沉降监测服务' },
+    short: { th: 'ติดตั้งและตรวจวัด Settlement Point / Benchmark เพื่อเฝ้าระวังการทรุดตัวของอาคาร โรงงาน และโครงสร้าง', en: 'Install and monitor settlement points and benchmarks to prevent structural subsidence.', zh: '安装并监测沉降观测点及基准点，预防建筑物、工厂及结构沉降风险。' },
+    intro: { th: 'ติดตั้งจุดตรวจวัดและเก็บค่าระดับเป็นรอบ เพื่อเฝ้าระวังการทรุดตัวของอาคาร โรงงาน และโครงสร้างข้างเคียงระหว่างก่อสร้าง', en: 'Install monitoring points and collect periodic levels to monitor structural settlement during construction.', zh: '布设观测点并按周期采集高程，监测施工期间建筑物及周边结构沉降。' },
+    scope: {
+      th: ['ติดตั้ง Settlement Point และ Benchmark อ้างอิง', 'ตรวจวัดค่าระดับตามรอบที่กำหนด', 'เปรียบเทียบผลกับรอบก่อนหน้าและเกณฑ์เฝ้าระวัง', 'สรุปรายงานรายรอบหรือรายเดือน'],
+      en: ['Install settlement points and reference benchmarks', 'Periodic level measurements', 'Compare results with previous cycles and safety thresholds', 'Cycle or monthly reports'],
+      zh: ['安装沉降点及参考基准点', '按周期进行高程观测', '与前期及安全预警标准进行对比分析', '出具周期或月度报告']
+    },
+    tools: ['High Precision Digital Level', 'Total Station'],
+    deliver: {
+      th: ['ตารางค่าการทรุดตัวสะสม (Excel)', 'กราฟการทรุดตัวตามเวลา', 'รายงานประจำรอบ (PDF)'],
+      en: ['Cumulative settlement table (Excel)', 'Settlement trend graphs', 'Cycle report (PDF)'],
+      zh: ['累计沉降量表 (Excel)', '沉降随时间变化曲线图', '周期报告 (PDF)']
+    }
+  },
+  {
+    key: 'movement', tag: 'MOVEMENT MONITORING',
+    title: { th: 'งานตรวจวัดการเคลื่อนตัวโครงสร้าง', en: 'Structural Movement Monitoring', zh: '结构位移监测' },
+    short: { th: 'ตรวจสอบการเคลื่อนตัวในแนวราบและแนวดิ่งของโครงสร้าง กำแพง หรือพื้นที่ก่อสร้าง', en: 'Monitor horizontal and vertical movements of structures, retaining walls, or construction sites.', zh: '监测建筑物、挡土墙或施工区域的水平及垂直位移。' },
+    intro: { th: 'ตรวจวัดการเคลื่อนตัวในแนวราบและแนวดิ่งของโครงสร้าง กำแพงกันดิน หรืออาคารข้างเคียง ระหว่างงานขุดดินและงานก่อสร้าง', en: 'Measure horizontal and vertical movements of structures or retaining walls during excavation and construction.', zh: '在基坑开挖及施工期间，测量结构、挡土墙或邻近建筑物的水平及垂直位移。' },
+    scope: {
+      th: ['ติดตั้งเป้าสะท้อน (Prism) หรือจุดตรวจวัด', 'วัดค่าพิกัด 3 มิติตามรอบที่กำหนด', 'เทียบกับค่าเริ่มต้นและเกณฑ์เตือนภัย', 'แจ้งผลทันทีเมื่อค่าเกินเกณฑ์'],
+      en: ['Install prisms or monitoring targets', 'Periodic 3D coordinate measurements', 'Compare with baseline and alarm thresholds', 'Immediate alert if limits exceeded'],
+      zh: ['安装反光棱镜或监测目标', '按周期进行三维坐标测量', '与初始值及预警标准对比', '超限时立即预警']
+    },
+    tools: ['High Precision Total Station', 'Prisms', 'Auto Level'],
+    deliver: {
+      th: ['ตารางการเคลื่อนตัว dX / dY / dZ', 'กราฟแนวโน้มการเคลื่อนตัว', 'รายงานประจำรอบ'],
+      en: ['Movement table dX / dY / dZ', 'Movement trend graphs', 'Cycle reports'],
+      zh: ['位移量表 dX / dY / dZ', '位移变化趋势图', '周期监测报告']
+    }
+  },
+  {
+    key: 'floor', tag: 'FLOOR LEVEL SURVEY',
+    title: { th: 'งานสำรวจระดับพื้น', en: 'Floor Level Survey', zh: '地面标高平整度测绘' },
+    short: { th: 'ตรวจสอบระดับพื้น ความแตกต่างของระดับ และจัดทำ Floor Level Map / Contour สำหรับโรงงานและอาคาร', en: 'Inspect floor levels, level differences, and generate floor level maps/contours for factories and buildings.', zh: '检测工厂及建筑地面标高、高差，制作地面标高图/等高线图。' },
+    intro: { th: 'ตรวจระดับและความเรียบของพื้นโรงงานหรือคลังสินค้า ก่อนติดตั้งเครื่องจักร ระบบชั้นวาง (Racking) หรือก่อนส่งมอบงาน', en: 'Inspect floor levels and flatness before machinery installation, racking setup, or handover.', zh: '在安装机械、货架系统或交付前，检测工厂或仓库地面的标高与平整度。' },
+    scope: {
+      th: ['เก็บค่าระดับพื้นแบบ Grid', 'หาจุดสูงและจุดต่ำเทียบกับระดับออกแบบ', 'ตรวจความต่างระดับระหว่างแผ่นพื้น'],
+      en: ['Grid floor level data collection', 'Identify high and low spots vs design level', 'Check level differences between floor slabs'],
+      zh: ['网格法采集地面标高', '对比设计标高查找高低点', '检查各板块间高差']
+    },
+    tools: ['Auto Level', 'Total Station'],
+    deliver: {
+      th: ['Floor Level Map', 'Contour ระดับพื้น', 'ตารางค่าระดับ (Excel)'],
+      en: ['Floor Level Map', 'Floor Contour Plan', 'Level data table (Excel)'],
+      zh: ['地面标高图', '地面等高线图', '标高数据表 (Excel)']
+    }
+  },
+  {
+    key: 'drain', tag: 'DRAINAGE SURVEY',
+    title: { th: 'งานสำรวจระบบระบายน้ำ', en: 'Drainage Survey', zh: '排水系统测绘' },
+    short: { th: 'สำรวจตำแหน่ง Manhole, Cover Level, Invert Level, Pipe Size, Pipe Direction และระดับระบบระบายน้ำ', en: 'Survey manholes, cover levels, invert levels, pipe sizes, flow directions, and drainage networks.', zh: '测绘检查井位置、井盖标高、管底标高、管径、流向及排水系统。' },
+    intro: { th: 'สำรวจระบบท่อและบ่อพักที่มีอยู่ เพื่อใช้ออกแบบการเชื่อมต่อระบบใหม่ หรือหาสาเหตุปัญหาน้ำท่วมขัง', en: 'Survey existing pipe and manhole networks to design new connections or investigate drainage issues.', zh: '测绘现有管道及检查井，用于设计新系统连接或排查积水原因。' },
+    scope: {
+      th: ['สำรวจตำแหน่งบ่อพัก (Manhole)', 'วัด Cover Level และ Invert Level', 'ระบุขนาดและทิศทางการไหลของท่อ', 'ตรวจความลาดเอียงของแนวท่อ'],
+      en: ['Survey manhole locations', 'Measure cover and invert levels', 'Identify pipe size and flow direction', 'Check pipe slope/gradient'],
+      zh: ['测绘检查井位置', '测量井盖标高及管底标高', '标明管径及水流方向', '检查管道坡度']
+    },
+    tools: ['Total Station', 'GNSS RTK', 'Auto Level'],
+    deliver: {
+      th: ['แบบผังระบบระบายน้ำ (DWG / PDF)', 'ตาราง Manhole Schedule', 'รูปตัดตามยาวแนวท่อ (Profile)'],
+      en: ['Drainage layout plan (DWG / PDF)', 'Manhole Schedule Table', 'Pipe Profile Drawing'],
+      zh: ['排水系统平面图 (DWG / PDF)', '检查井一览表', '管道纵断面图 (Profile)']
+    }
+  },
+  {
+    key: 'boundary', tag: 'BOUNDARY CHECK',
+    title: { th: 'งานตรวจสอบแนวเขตที่ดิน', en: 'Boundary Check', zh: '土地边界复核' },
+    short: { th: 'ตรวจสอบตำแหน่งแนวเขตและหมุดที่ดินกับข้อมูลอ้างอิง รวมถึงการตรวจสอบด้วย GNSS RTK ตามระบบพิกัดที่กำหนด', en: 'Verify boundary markers and land limits against reference data using GNSS RTK.', zh: '使用 GNSS RTK 核对土地边界及界标与参考数据的位置。' },
+    intro: { th: 'ตรวจสอบตำแหน่งหมุดและแนวเขตที่ดินเทียบกับข้อมูลอ้างอิง เพื่อใช้วางผังและออกแบบโครงการ (ไม่ใช่การรังวัดเพื่อออกหรือแก้ไขเอกสารสิทธิ์ ซึ่งต้องดำเนินการผ่านสำนักงานที่ดิน)', en: 'Verify boundary markers against reference data for project planning (not official land titling which requires the Land Department).', zh: '核对界标及土地边界用于项目规划与设计（非土地厅办理的正式权属测绘）。' },
+    scope: {
+      th: ['ค้นหาและวัดค่าพิกัดหมุดเขตที่ดิน', 'เทียบตำแหน่งกับข้อมูลที่ลูกค้าให้มา', 'แสดงแนวเขตบนแบบผังโครงการ', 'ตรวจระยะร่นอาคารจากแนวเขต'],
+      en: ['Locate and measure land boundary markers', 'Compare positions with client data', 'Display boundaries on project layout', 'Check building setbacks from boundaries'],
+      zh: ['搜寻并测量土地界标坐标', '与客户提供的数据进行比对', '在项目总图上标示边界', '检查建筑物退界距离']
+    },
+    tools: ['GNSS RTK', 'Total Station'],
+    deliver: {
+      th: ['ผังแนวเขตเทียบตำแหน่งจริง (DWG / PDF)', 'ตารางพิกัดหมุดเขต', 'Photo Report'],
+      en: ['Boundary comparison plan (DWG / PDF)', 'Boundary coordinate table', 'Photo Report'],
+      zh: ['边界比对图 (DWG / PDF)', '界标坐标表', '照片报告']
+    }
+  },
+  {
+    key: 'drone', tag: 'UAV SURVEY',
+    title: { th: 'งานสำรวจด้วยโดรน (UAV)', en: 'UAV / Drone Survey', zh: '无人机航测 (UAV)' },
+    short: { th: 'ถ่ายภาพทางอากาศเพื่อจัดทำ Orthophoto, Point Cloud, DSM, DTM, Contour และแบบจำลองพื้นที่ 3 มิติ', en: 'Aerial photography for Orthophoto, Point Cloud, DSM, DTM, Contour, and 3D terrain models.', zh: '通过航空摄影制作正射影像 (Orthophoto)、点云、DSM、DTM、等高线及三维地形模型。' },
+    intro: { th: 'ถ่ายภาพทางอากาศเพื่อทำแผนที่และแบบจำลองพื้นที่ 3 มิติ เหมาะกับพื้นที่ขนาดใหญ่ ทำได้รวดเร็ว และเห็นภาพรวมทั้งโครงการ', en: 'Aerial photography for maps and 3D models. Ideal for large areas, fast deployment, and comprehensive overviews.', zh: '通过航拍制作地图和三维模型。非常适合大面积区域，速度快且能提供项目全景。' },
+    scope: {
+      th: ['วางแผนการบินและวางจุดควบคุมภาคพื้นดิน (GCP)', 'บินถ่ายภาพทางอากาศ', 'ประมวลผลเป็นแผนที่และแบบจำลอง 3 มิติ', 'คำนวณปริมาตรกองวัสดุ (Stockpile)'],
+      en: ['Flight planning & Ground Control Points (GCP) setup', 'Aerial photography execution', 'Data processing for 3D maps and models', 'Stockpile volume calculation'],
+      zh: ['航线规划与地面控制点 (GCP) 布设', '执行无人机航拍', '三维地图与模型数据处理', '料堆方量计算']
+    },
+    tools: ['UAV Drone', 'GNSS RTK for GCP', 'Photogrammetry Software'],
+    deliver: {
+      th: ['Orthophoto', 'Point Cloud / DSM / DTM', 'Contour และแบบจำลอง 3 มิติ', 'รายงานปริมาตร'],
+      en: ['Orthophoto map', 'Point Cloud / DSM / DTM', 'Contours & 3D Model', 'Volume Report'],
+      zh: ['正射影像图 (Orthophoto)', '点云 / DSM / DTM', '等高线及三维模型', '方量计算报告']
+    }
+  },
+  {
+    key: 'volume', tag: 'EARTHWORK VOLUME',
+    title: { th: 'งานคำนวณปริมาตรดิน', en: 'Earthwork Volume Calculation', zh: '土方量计算' },
+    short: { th: 'สำรวจเพื่อคำนวณปริมาณ Cut & Fill, Stockpile Volume และเปรียบเทียบระดับ Existing กับระดับ Design', en: 'Survey to calculate Cut & Fill volumes, stockpile volumes, and compare existing vs design levels.', zh: '测算挖填方 (Cut & Fill) 量、料堆体积，对比现状与设计标高。' },
+    intro: { th: 'คำนวณปริมาตรดินขุด ดินถม หรือกองวัสดุ เพื่อใช้วางแผนงาน เบิกจ่ายงวดงาน หรือตรวจรับงานดิน', en: 'Calculate excavation, filling, or stockpile volumes for project planning, progress billing, or earthwork inspection.', zh: '计算土方开挖、回填或料堆体积，用于施工规划、工程款进度核算或土方验收。' },
+    scope: {
+      th: ['สำรวจระดับก่อนและหลังทำงานดิน', 'เปรียบเทียบระดับ Existing กับ Design', 'คำนวณปริมาตรกองวัสดุ (Stockpile)', 'ตรวจปริมาณงานดินรายงวด'],
+      en: ['Survey levels before and after earthworks', 'Compare Existing vs Design levels', 'Calculate stockpile volumes', 'Progress earthwork volume audits'],
+      zh: ['土方施工前后标高测量', '现状标高与设计标高对比', '料堆方量计算', '分期土方工程量审核']
+    },
+    tools: ['GNSS RTK', 'UAV Drone', 'Total Station'],
+    deliver: {
+      th: ['รายงานปริมาตร Cut & Fill', 'แบบรูปตัด (Cross Section)', 'แบบจำลองพื้นผิว (Surface Model)'],
+      en: ['Cut & Fill Volume Report', 'Cross Section drawings', 'Surface Model'],
+      zh: ['挖填方量报告', '断面图 (Cross Section)', '三维地面模型 (Surface Model)']
+    }
+  },
+  {
+    key: 'tree', tag: 'TREE & EXISTING SURVEY',
+    title: { th: 'งานสำรวจต้นไม้และพื้นที่เดิม', en: 'Tree & Existing Features Survey', zh: '树木及现有地物测绘' },
+    short: { th: 'สำรวจตำแหน่ง ขนาด ชนิดต้นไม้ สิ่งปลูกสร้าง และสิ่งกีดขวางในพื้นที่โครงการ', en: 'Survey tree positions, sizes, species, structures, and obstructions within the project site.', zh: '测绘项目现场的树木位置、尺寸、种类、建筑物及障碍物。' },
+    intro: { th: 'สำรวจต้นไม้และสิ่งปลูกสร้างเดิมในพื้นที่ เพื่อวางแผนรื้อถอน ขนย้าย หรือออกแบบโครงการให้หลีกเลี่ยงได้', en: 'Survey existing trees and structures to plan for demolition, relocation, or design avoidance.', zh: '测绘场地内现有树木及建筑物，为拆除、移栽或项目避让设计提供依据。' },
+    scope: {
+      th: ['วัดตำแหน่งต้นไม้ ขนาดเส้นรอบวง และทรงพุ่ม', 'ระบุชนิดต้นไม้เบื้องต้น', 'สำรวจสิ่งปลูกสร้างและสิ่งกีดขวาง', 'ติดป้ายหมายเลขต้นไม้'],
+      en: ['Measure tree positions, trunk girth, and canopy spread', 'Initial tree species identification', 'Survey existing structures and obstructions', 'Tag tree numbers'],
+      zh: ['测量树木位置、胸径及冠幅', '初步识别树种', '测绘现有建筑物及障碍物', '悬挂树木编号牌']
+    },
+    tools: ['GNSS RTK', 'Total Station', 'Measuring Tape'],
+    deliver: {
+      th: ['Tree Survey Plan (DWG / PDF)', 'ตารางรายการต้นไม้ (Excel)', 'Photo Report'],
+      en: ['Tree Survey Plan (DWG / PDF)', 'Tree Schedule Table (Excel)', 'Photo Report'],
+      zh: ['树木测绘图 (DWG / PDF)', '树木清册表 (Excel)', '照片报告']
+    }
+  },
+  {
+    key: 'asbuilt', tag: 'AS-BUILT SURVEY',
+    title: { th: 'งานสำรวจหลังการก่อสร้าง (As-Built)', en: 'As-Built Survey', zh: '竣工测量 (As-Built)' },
+    short: { th: 'ตรวจสอบตำแหน่งและระดับของงานที่ก่อสร้างจริง พร้อมจัดทำ As-Built Drawing สำหรับส่งมอบโครงการ', en: 'Verify actual constructed positions and levels, and produce As-Built drawings for project handover.', zh: '检核实际施工位置与标高，制作项目交付竣工图 (As-Built Drawing)。' },
+    intro: { th: 'สำรวจตำแหน่งและระดับของงานที่ก่อสร้างเสร็จจริง เพื่อจัดทำแบบส่งมอบโครงการและใช้อ้างอิงในงานบำรุงรักษา', en: 'Survey actually completed positions and levels to produce handover drawings and maintenance references.', zh: '对实际完工的位置和标高进行测绘，编制交付图纸并用于后期运维参考。' },
+    scope: {
+      th: ['สำรวจอาคาร ถนน ท่อ และงานสาธารณูปโภค', 'เปรียบเทียบงานจริงกับแบบก่อสร้าง', 'ระบุจุดที่คลาดเคลื่อนจากแบบ'],
+      en: ['Survey completed buildings, roads, pipes, and utilities', 'Compare actual work with construction drawings', 'Highlight deviations from design'],
+      zh: ['测绘已建成的建筑、道路、管道及公用设施', '实际施工与设计图纸对比', '标注与图纸的偏差位置']
+    },
+    tools: ['Total Station', 'GNSS RTK', 'Auto Level', 'UAV Drone'],
+    deliver: {
+      th: ['As-Built Drawing (DWG / PDF)', 'ตารางเปรียบเทียบกับแบบ', 'Photo Report'],
+      en: ['As-Built Drawing (DWG / PDF)', 'Comparison Table', 'Photo Report'],
+      zh: ['竣工图 (DWG / PDF)', '与设计对比表', '照片报告']
+    }
+  },
+  {
+    key: 'hydro', tag: 'HYDROGRAPHIC SURVEY',
+    title: { th: 'งานสำรวจภูมิประเทศใต้น้ำ', en: 'Hydrographic Survey', zh: '水下地形测绘' },
+    short: { th: 'ตรวจวัดระดับท้องน้ำ ความลึก และลักษณะภูมิประเทศใต้น้ำ สำหรับคลอง บ่อ อ่างเก็บน้ำ หรือพื้นที่น้ำ', en: 'Measure waterbed levels, depths, and underwater topography for canals, ponds, or reservoirs.', zh: '测量运河、池塘、水库或水域的底标高、水深及水下地形。' },
+    intro: { th: 'ตรวจวัดความลึกและระดับท้องน้ำของคลอง บ่อ และอ่างเก็บน้ำ เพื่อใช้ออกแบบงานขุดลอก งานก่อสร้างริมน้ำ หรือคำนวณความจุ', en: 'Measure water depths and bed levels for dredging design, waterfront construction, or capacity calculation.', zh: '测量水深及水底标高，用于疏浚设计、临水工程建设或库容计算。' },
+    scope: {
+      th: ['สำรวจความลึกตามแนวรูปตัดขวาง (Cross Section)', 'เก็บค่าระดับท้องน้ำและแนวตลิ่ง', 'คำนวณปริมาตรขุดลอกหรือความจุ'],
+      en: ['Measure depths along cross-sections', 'Collect waterbed and bank levels', 'Calculate dredging volume or water capacity'],
+      zh: ['沿横断面测量水深', '采集水底及岸线标高', '计算疏浚方量或水库容量']
+    },
+    tools: ['Echo Sounder', 'GNSS RTK', 'Survey Boat'],
+    deliver: {
+      th: ['แบบระดับท้องน้ำและ Cross Section (DWG / PDF)', 'Contour ใต้น้ำ', 'ตารางข้อมูลความลึก'],
+      en: ['Waterbed level & Cross Section (DWG / PDF)', 'Underwater Contour Plan', 'Depth data table'],
+      zh: ['水下标高及断面图 (DWG / PDF)', '水下等高线图', '水深数据表']
+    }
+  }
+];
+
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("mainNav");
+
+function renderServices() {
+  const grid = document.getElementById('serviceGrid');
+  grid.querySelectorAll('.service-card').forEach(el => el.remove());
+  const deliverCard = grid.querySelector('.deliverables-card');
+  
+  services.forEach((s, i) => {
+    const card = document.createElement('article');
+    card.className = 'service-card';
+    card.onclick = () => openService(s.key);
+    card.innerHTML = `
+      <div class="service-icon">${String(i + 1).padStart(2, '0')}</div>
+      <h3>${s.title[currentLang]}</h3>
+      <p>${s.short[currentLang]}</p>
+      <span class="service-more">${translations[currentLang].seeDetails}</span>
+    `;
+    grid.insertBefore(card, deliverCard);
+  });
+}
+
+function renderQuoteSelect() {
+  const quoteSelect = document.getElementById('quoteService');
+  quoteSelect.innerHTML = `<option value="" data-i18n="qSelectDefault">${translations[currentLang].qSelectDefault}</option>` +
+    services.map(s => `<option>${s.title[currentLang]}</option>`).join('') +
+    `<option>${translations[currentLang].otherService}</option>`;
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.toLowerCase() === lang || (lang === 'zh' && btn.textContent === '中文'));
+  });
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (translations[lang][key]) el.innerHTML = translations[lang][key];
+  });
+
+  renderServices();
+  renderQuoteSelect();
+}
+
+function switchPage(pageId) {
+  document.querySelectorAll('.page-section').forEach(page => page.classList.remove('active'));
+  document.getElementById('page-' + pageId).classList.add('active');
+
+  const navId = pageId === 'service' ? 'services' : pageId;
+  document.querySelectorAll('#mainNav button[onclick^="switchPage"]').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick') === `switchPage('${navId}')`);
+  });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  nav.classList.remove('open');
+  menuBtn.setAttribute("aria-expanded", "false");
+  menuBtn.textContent = "☰";
+}
+
+function openService(key) {
+  const s = services.find(item => item.key === key);
+  if (!s) return;
+  const toList = arr => arr.map(item => `<li>${item}</li>`).join('');
+
+  document.getElementById('sdTag').textContent = s.tag;
+  document.getElementById('sdTitle').textContent = s.title[currentLang];
+  document.getElementById('sdIntro').textContent = s.intro[currentLang];
+  document.getElementById('sdScope').innerHTML = toList(s.scope[currentLang]);
+  document.getElementById('sdTools').innerHTML = toList(s.tools);
+  document.getElementById('sdDeliver').innerHTML = toList(s.deliver[currentLang]);
+  document.getElementById('sdPhotos').innerHTML = [1, 2]
+    .map(n => `<img src="${s.key}${n}.jpg" alt="${s.title[currentLang]}" loading="lazy" onerror="this.style.display='none'">`)
+    .join('');
+
+  const quoteSelect = document.getElementById('quoteService');
+  quoteSelect.value = s.title[currentLang];
+  document.title = s.title[currentLang] + ' | SC Survey & Construction';
+
+  switchPage('service');
+}
+
+function filterGallery(category, event) {
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    const show = category === 'all' || item.getAttribute('data-category') === category;
+    item.style.display = show ? 'flex' : 'none';
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
+
+menuBtn.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.textContent = open ? "✕" : "☰";
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+renderServices();
+renderQuoteSelect();
+</script>
+
+</body>
+</html>
